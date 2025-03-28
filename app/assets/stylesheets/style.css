@@ -8,6 +8,14 @@ body {
     color: orange;
     background-color: rgb(140, 0, 0);
 }
+.H2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+    padding-left: 2%;
+    font-size: x-large;
+    color: orange;
+    background-color: rgb(140, 0, 0);
+}
 .List {
     font-family: Helvetica;
     font-style: italic;
@@ -80,4 +88,9 @@ table td {
     background-color: rgb(91, 0, 0);
     display: block;
     height: min-content;
+}
+.media {
+    display: block;
+    max-width: 20%;
+    height: auto;
 }
