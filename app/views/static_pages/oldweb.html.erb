@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ábalos Inc</title>
+    <h1 class="H1">Vicente Ábalos</h1>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="bg-dark" onload=getData()>
+    <div class="container-lg my-5">
+        <div class="row align-items-center">
+        <div class="col-sm-4 col-lg-4">
+        <p class="List bgLB">Major: Computing Sciences</p>
+        </div>
+        <div class="col-sm-4 col-lg-4">
+        <p class="List bgLB">Enrollment year to UANDES: 2022</p>
+        </div>
+        <div class="col-sm-4 col-lg-4">
+        <p class="List bgLB"><a href="https://github.com/VicenteAbalos">Github Account</a></p>
+        </div>
+        <button type="button" class="bgR" onclick="mybuttonF()">SUMMARY</button>
+        <p class="summary" id="summ">My name is Vicente Ábalos, and I am a student at Universidad de los Andes, Chile. 
+            My biggest interests are history and programming, with the latter being the career I chose to study. 
+            I also have an interest in astronomy and possess a small telescope, which I mainly use to watch planets and the Moon.
+            During my free time, I like to play videogames and go on for walks.</p>
+        </div>
+    </div>
+    <div class="imageBox container-sm my-2">
+        <div class="row align-items-center">
+            <div class="col">
+                <img src="coffee mug.jfif">
+                <p class="imgTxt">Image of Dean McCoppin from The Iron Giant</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-sm">
+    <table>
+        <tr>
+            <th>Skill</td>
+            <th>Level</td>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td>Advanced</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>Intermediate</td>
+        </tr>
+        <tr>
+            <td>C++</td>
+            <td>Advanced</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Advanced</td>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Intermediate</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Basic</td>
+        </tr>
+        <tr>
+            <td>SQL</td>
+            <td>Advanced</td>
+        </tr>
+        <tr>
+            <td>Excel</td>
+            <td>Intermediate</td>
+        </tr>
+        <tr>
+            <td>History</td>
+            <td>Intermediate</td>
+        </tr>
+        <tr>
+            <td>English</td>
+            <td>Expert</td>
+        </tr>
+        <tr>
+            <td>Spanish</td>
+            <td>Native</td>
+        </tr>
+    </table>
+    </div>
+    <div class="container-sm my-5">
+        <label for="tInput" class="List">Insert Text</label><br>
+        <input type="text" class="txtInput" id="tInput">
+        <button type="button" class="btn btn-success" onclick="mybuttonT()">DISPLAY</button>
+        <p class="ending cent" id="textholder"></p>
+    </div>
+
+    <div class="container-sm">
+        <h1 class="H1"><span class="badge text-bg-secondary">TOP NEWS</span></h1>
+        <div class="accordion accordion-flush p-5" id="topNews">
+            <div class="accordion-item">
+                <h2 class="accordion-header H1" id="News1">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    #1 News
+                  </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#topNews">
+                  <div class="accordion-body">Title<p id="newsOneTitle">...</p></div>
+                  <div class="accordion-body">Source<p id="newsOneAuthor"></p></div>
+                  <div class="accordion-body">Description<p id="newsOneDescription"></p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseOne">
+                    #2 News
+                  </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#topNews">
+                  <div class="accordion-body">Title<p id="newsTwoTitle"></p></div>
+                  <div class="accordion-body">Source<p id="newsTwoAuthor"></p></div>
+                  <div class="accordion-body">Description<p id="newsTwoDescription"></p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseOne">
+                    #3 News
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#topNews">
+                  <div class="accordion-body">Title<p id="newsThreeTitle"></p></div>
+                  <div class="accordion-body">Source<p id="newsThreeAuthor"></p></div>
+                  <div class="accordion-body">Description<p id="newsThreeDescription"></p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseOne">
+                    #4 News
+                  </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#topNews">
+                  <div class="accordion-body">Title<p id="newsFourTitle"></p></div>
+                  <div class="accordion-body">Source<p id="newsFourAuthor"></p></div>
+                  <div class="accordion-body">Description<p id="newsFourDescription"></p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseOne">
+                    #5 News
+                  </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#topNews">
+                  <div class="accordion-body">Title<p id="newsFiveTitle"></p></div>
+                  <div class="accordion-body">Source<p id="newsFiveAuthor"></p></div>
+                  <div class="accordion-body">Description<p id="newsFiveDescription"></p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseOne">
+                    #6 News
+                  </button>
+                </h2>
+                <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#topNews">
+                  <div class="accordion-body">Title<p id="newsSixTitle"></p></div>
+                  <div class="accordion-body">Source<p id="newsSixAuthor"></p></div>
+                  <div class="accordion-body">Description<p id="newsSixDescription"></p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseOne">
+                    #7 News
+                  </button>
+                </h2>
+                <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#topNews">
+                  <div class="accordion-body">Title<p id="newsSevenTitle"></p></div>
+                  <div class="accordion-body">Source<p id="newsSevenAuthor"></p></div>
+                  <div class="accordion-body">Description<p id="newsSevenDescription"></p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseOne">
+                    #8 News
+                  </button>
+                </h2>
+                <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#topNews">
+                  <div class="accordion-body">Title<p id="newsEightTitle"></p></div>
+                  <div class="accordion-body">Source<p id="newsEightAuthor"></p></div>
+                  <div class="accordion-body">Description<p id="newsEightDescription"></p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseOne">
+                    #9 News
+                  </button>
+                </h2>
+                <div id="flush-collapseNine" class="accordion-collapse collapse" data-bs-parent="#topNews">
+                  <div class="accordion-body">Title<p id="newsNineTitle"></p></div>
+                  <div class="accordion-body">Source<p id="newsNineAuthor"></p></div>
+                  <div class="accordion-body">Description<p id="newsNineDescription"></p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseOne">
+                    #10 News
+                  </button>
+                </h2>
+                <div id="flush-collapseTen" class="accordion-collapse collapse" data-bs-parent="#topNews">
+                  <div class="accordion-body">Title<p id="newsTenTitle"></p></div>
+                  <div class="accordion-body">Source<p id="newsTenAuthor"></p></div>
+                  <div class="accordion-body">Description<p id="newsTenDescription"></p></div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <p class="ending">You've reached the end! Have a <a href="https://en.wikipedia.org/wiki/Pwyll_Pendefig_Dyfed">link</a>. It's on the house.</p>
+    </div>
+<script>
+    function mybuttonF() {
+        var v=document.getElementById("summ");
+        if (v.style.display === "block"){
+            v.style.display = "none";
+        }
+        else {
+            v.style.display = "block"
+        }
+    }
+    function mybuttonT(){
+        let inp=document.getElementById("tInput").value;
+        document.getElementById("textholder").innerHTML=inp;
+
+    }
+
+    async function getData() {
+        const topNews = await fetch("https://newsapi.org/v2/top-headlines?category=sports&apiKey=3dc971b665d94c669f5ff4ca59ddb2a2")
+        .then(response => response.json())
+        .then(data => {return data});
+        console.log(topNews.articles[0]);
+        const source=["newsOneAuthor","newsTwoAuthor","newsThreeAuthor","newsFourAuthor","newsFiveAuthor","newsSixAuthor","newsSevenAuthor","newsEightAuthor","newsNineAuthor","newsTenAuthor"];
+        const description=["newsOneDescription","newsTwoDescription","newsThreeDescription","newsFourDescription","newsFiveDescription","newsSixDescription","newsSevenDescription","newsEightDescription","newsNineDescription","newsTenDescription"];
+        const titlel=["newsOneTitle","newsTwoTitle","newsThreeTitle","newsFourTitle","newsFiveTitle","newsSixTitle","newsSevenTitle","newsEightTitle","newsNineTitle","newsTenTitle"];
+        
+
+            for (i =0;i<10;i++){
+                insertNews(topNews.articles[i],titlel[i],description[i],source[i]);
+            }
+    }
+    function insertNews(newTitle,titlel,description,source){
+            //console.log(document.getElementById("newsOneTitle"));
+            //console.log(document.getElementById(titlel));
+            document.getElementById(titlel).innerHTML=newTitle["title"];
+            document.getElementById(description).innerHTML=newTitle["description"];
+            document.getElementById(source).innerHTML=newTitle["source"]["name"];
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
