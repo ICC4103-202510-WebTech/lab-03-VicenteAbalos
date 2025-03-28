@@ -1,0 +1,39 @@
+<script>
+    function mybuttonF() {
+        var v=document.getElementById("summ");
+        if (v.style.display === "block"){
+            v.style.display = "none";
+        }
+        else {
+            v.style.display = "block"
+        }
+    }
+    function mybuttonT(){
+        let inp=document.getElementById("tInput").value;
+        document.getElementById("textholder").innerHTML=inp;
+
+    }
+
+    async function getData() {
+        const topNews = await fetch("https://newsapi.org/v2/top-headlines?category=sports&apiKey=3dc971b665d94c669f5ff4ca59ddb2a2")
+        .then(response => response.json())
+        .then(data => {return data});
+        console.log(topNews.articles[0]);
+        const source=["newsOneAuthor","newsTwoAuthor","newsThreeAuthor","newsFourAuthor","newsFiveAuthor","newsSixAuthor","newsSevenAuthor","newsEightAuthor","newsNineAuthor","newsTenAuthor"];
+        const description=["newsOneDescription","newsTwoDescription","newsThreeDescription","newsFourDescription","newsFiveDescription","newsSixDescription","newsSevenDescription","newsEightDescription","newsNineDescription","newsTenDescription"];
+        const titlel=["newsOneTitle","newsTwoTitle","newsThreeTitle","newsFourTitle","newsFiveTitle","newsSixTitle","newsSevenTitle","newsEightTitle","newsNineTitle","newsTenTitle"];
+        
+
+            for (i =0;i<10;i++){
+                insertNews(topNews.articles[i],titlel[i],description[i],source[i]);
+            }
+    }
+    function insertNews(newTitle,titlel,description,source){
+            //console.log(document.getElementById("newsOneTitle"));
+            //console.log(document.getElementById(titlel));
+            document.getElementById(titlel).innerHTML=newTitle["title"];
+            document.getElementById(description).innerHTML=newTitle["description"];
+            document.getElementById(source).innerHTML=newTitle["source"]["name"];
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
