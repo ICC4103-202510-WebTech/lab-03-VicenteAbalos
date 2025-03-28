@@ -25,9 +25,33 @@
     <h1 class="H1">Vicente Ábalos</h1>
     </head>
 
-  <body>
+  <body class="bg-dark">
     <%= render partial: 'layouts/navbar' %>
     <%= yield %>
     <%= render partial: 'layouts/script' %>
   </body>
+  <footer class="foot border border-success">
+    <div class="container-lg my-5">
+      <h1 class="text-white">Follow us on Social Media!</h1>
+      <div class="row align-items-center">
+        <div class="col-sm-4 col-lg-2">
+          <a href="#"><p class="List text-terciary">Twitter</p></a>
+        </div>
+        <div class="col-sm-4 col-lg-2">
+          <a href="#"><p class="List text-terciary">Instagram</p></a>
+        </div>
+        <div class="col-sm-4 col-lg-2">
+          <a href="#"><p class="List text-terciary">Facebook</p></a>
+        </div>
+        <div class="col-sm-4 col-lg-2">
+          <a href="#"><p class="List text-terciary">LinkedIn</p></a>
+        </div>
+        <div class="col-sm-4 col-lg-2">
+          <a href="#"><p class="List text-terciary">Youtube</p></a>
+        </div>
+    </div>
+    <div class="border border-secondary">
+    <p class="List"> Intellectual property of AbalApp&copy;</p>
+    </div>
+  </footer>
 </html>

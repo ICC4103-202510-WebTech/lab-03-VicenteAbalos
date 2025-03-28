@@ -1,4 +1,7 @@
 <script>
+    function formReceived(){
+        alert("Thank you for your message, we will contact you soon!")
+    }
     function mybuttonF() {
         var v=document.getElementById("summ");
         if (v.style.display === "block"){
@@ -11,7 +14,6 @@
     function mybuttonT(){
         let inp=document.getElementById("tInput").value;
         document.getElementById("textholder").innerHTML=inp;
-
     }
 
     async function getData() {
